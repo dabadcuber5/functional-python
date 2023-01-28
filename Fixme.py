@@ -57,13 +57,13 @@ def small_words(text):
     ['a', 'big', 'word', 'is', 'bad']
     '''
     var = text.split()
-    var = map(bigWord, var)
+    var = map(big_word, var)
     var = list(var)
     var = list(filter(lambda item: item is not None, var))
     return var
 
 
-def bigWord(string):
+def big_word(string):
     if (len(string) > 4):
         return
     return string
@@ -104,9 +104,9 @@ def lengths(strings):
     >>> lengths(['this','is','a','test'])
     [4, 2, 1, 4]
     '''
-    words = map(lengthWord, strings)
+    words = map(length_word, strings)
     return list(words)
 
 
-def lengthWord(word):
+def length_word(word):
     return len(word)
